@@ -1,14 +1,16 @@
-## Updated for Swift 4.2
-Requires Xcode 10 and Swift 4.2.
+## Requirements
+iOS 17+, Xcode 15+ (Swift 5.9 tools).
 
 ## Installation
-Drop in the Spring folder to your Xcode project (make sure to enable "Copy items if needed" and "Create groups").
+Add the package with Swift Package Manager: in Xcode choose File > Add Package Dependencies and enter
+`https://github.com/joemcmahon/Spring`, or add it to your `Package.swift`:
+```swift
+.package(url: "https://github.com/joemcmahon/Spring", branch: "master")
+```
 
-Or via CocoaPods:
-```
-use_frameworks!
-pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
-```
+Or drop the `Sources/Spring` folder into your Xcode project (enable "Copy items if needed" and "Create groups").
+
+CocoaPods is no longer supported.
 
 ## Usage with Storyboard
 In Identity Inspector, connect the UIView to SpringView Class and set the animation properties in Attribute Inspector.
