@@ -40,6 +40,7 @@
 		1AA7E1831AA36EFF00762D75 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA7E1811AA36EFF00762D75 /* AsyncImageView.swift */; };
 		1AA7E1841AA36EFF00762D75 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA7E1821AA36EFF00762D75 /* AsyncButton.swift */; };
 		1AB764641A6E4F070076CD78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964117471A5BE90A000E3A5A /* Images.xcassets */; };
+		A1B2C3D41F00000100000001 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D41F00000100000002 /* SceneDelegate.swift */; };
 		964117411A5BE90A000E3A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964117401A5BE90A000E3A5A /* AppDelegate.swift */; };
 		964117461A5BE90A000E3A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964117441A5BE90A000E3A5A /* Main.storyboard */; };
 		964117481A5BE90A000E3A5A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964117471A5BE90A000E3A5A /* Images.xcassets */; };
@@ -131,6 +132,7 @@
 		961888E51A66BF9000295A64 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		9641173B1A5BE90A000E3A5A /* SpringApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9641173F1A5BE90A000E3A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1B2C3D41F00000100000002 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		964117401A5BE90A000E3A5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		964117451A5BE90A000E3A5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		964117471A5BE90A000E3A5A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			children = (
 				961888D21A66BF9000295A64 /* Spring */,
 				964117401A5BE90A000E3A5A /* AppDelegate.swift */,
+				A1B2C3D41F00000100000002 /* SceneDelegate.swift */,
 				964117881A5BEC6F000E3A5A /* SpringViewController.swift */,
 				964117891A5BEC6F000E3A5A /* OptionsViewController.swift */,
 				9641178A1A5BEC6F000E3A5A /* CodeViewController.swift */,
@@ -538,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				964117411A5BE90A000E3A5A /* AppDelegate.swift in Sources */,
+				A1B2C3D41F00000100000001 /* SceneDelegate.swift in Sources */,
 				9641178D1A5BEC6F000E3A5A /* CodeViewController.swift in Sources */,
 				9641178C1A5BEC6F000E3A5A /* OptionsViewController.swift in Sources */,
 				9641178B1A5BEC6F000E3A5A /* SpringViewController.swift in Sources */,

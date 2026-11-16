@@ -102,18 +102,30 @@ class SpringViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         ballView.curve = animationCurves[selectedEasing].rawValue
     }
     
+    var statusBarStyle: UIStatusBarStyle = .default {
+        didSet {
+            UIView.animate(withDuration: 0.3) {
+                self.setNeedsStatusBarAppearanceUpdate()
+            }
+        }
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return statusBarStyle
+    }
+
    @objc func minimizeView(_ sender: AnyObject) {
         SpringAnimation.spring(duration: 0.7, animations: {
             self.view.transform = CGAffineTransform(scaleX: 0.935, y: 0.935)
         })
-        UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
+        statusBarStyle = .lightContent
     }
     
    @objc func maximizeView(_ sender: AnyObject) {
         SpringAnimation.spring(duration: 0.7, animations: {
             self.view.transform = CGAffineTransform(scaleX: 1, y: 1)
         })
-        UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.default, animated: true)
+        statusBarStyle = .default
     }
 
     let animations: [Spring.AnimationPreset] = [
@@ -182,7 +194,6 @@ class SpringViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         animationPicker.delegate = self
         animationPicker.dataSource = self
-        animationPicker.showsSelectionIndicator = true
     }
     
     @IBAction func ballButtonPressed(_ sender: AnyObject) {
