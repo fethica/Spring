@@ -103,21 +103,21 @@ import UIKit
 
 extension UIImage {
     func imageWithColor(tintColor: UIColor) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
-        
-        let context = UIGraphicsGetCurrentContext()
-        context!.translateBy(x: 0, y: self.size.height)
-        context!.scaleBy(x: 1.0, y: -1.0);
-        context!.setBlendMode(CGBlendMode.normal)
-        
-        let rect = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height)
-        context?.clip(to: rect, mask: self.cgImage!)
-        tintColor.setFill()
-        context!.fill(rect)
-        
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()! as UIImage
-        UIGraphicsEndImageContext()
-        
-        return newImage
+        let format = UIGraphicsImageRendererFormat.default()
+        format.scale = self.scale
+        format.opaque = false
+        let renderer = UIGraphicsImageRenderer(size: self.size, format: format)
+
+        return renderer.image { rendererContext in
+            let context = rendererContext.cgContext
+            context.translateBy(x: 0, y: self.size.height)
+            context.scaleBy(x: 1.0, y: -1.0)
+            context.setBlendMode(CGBlendMode.normal)
+
+            let rect = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height)
+            context.clip(to: rect, mask: self.cgImage!)
+            tintColor.setFill()
+            context.fill(rect)
+        }
     }
 }
